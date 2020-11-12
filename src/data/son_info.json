@@ -1,0 +1,60 @@
+{
+	"name": {
+		"type": "PI",
+		"value":"Heung-Min Son"
+	},
+	"dob": {
+		"type": "PI",
+		"value": "07-08-1992"
+	},
+	"country": {
+		"type": "location",
+    "value": "KR",
+    "img_url": "../assets/kr_flag.jpg"
+	},
+	"country name": {
+		"type": "PI",
+		"value": "Corea del Sur"
+	},
+	"position": {
+		"type": "careerInfo",
+		"value": "FW"
+	},
+	"points": {
+		"type": "chartInfo",
+		"value": {
+			"chartType": "bars",
+			"values": [5, 26, 8, 20, 13, 9, 3, -1]
+		}
+	},
+	"current team": {
+		"type": "careerInfo",
+    "value": "Tottenham",
+    "img_url": "../assets/tottenham.png"
+	},
+	"goals": {
+		"type": "careerInfo",
+		"value": 8
+	},
+	"assists": {
+		"type": "careerInfo",
+		"value": 2
+	},
+	"shirtNumber": {
+		"type": "careerInfo",
+		"value": 7
+	},
+	"attributes": {
+    "type": "chartInfo",
+    "chartType": "radar",
+    "value": {
+      "values": {
+        "attack": 86,
+        "technique": 75,
+        "tactic": 34,
+        "defense": 14,
+        "creativity": 76
+      }
+    }
+	}
+}
