@@ -5,6 +5,7 @@ import CircularImg from './components/CircularImg';
 import Footer from './components/Footer';
 import sonInfo from './data/son_info.json';
 import BarChartComponent from './components/BarChartComponent';
+import Tooltip from './components/Tooltip';
 import { formatPointsForChart } from './utils/utils';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <CircularImg src={sonImg} alt="son" />
+        <Tooltip content="example tooltip"><CircularImg src={sonImg} alt="son" /></Tooltip>
         <BarChartComponent
           data={formatPointsForChart(sonInfo)}
           width={300}
