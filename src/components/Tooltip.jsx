@@ -13,11 +13,10 @@ const Wrapper = styled.div`
 
 const ContentContainer = styled.span`
   visibility: hidden;
-  width: 120px;
   background-color: rgba(245, 245, 245, 0.5);
   color: black;
   text-align: center;
-  padding: 5px 0;
+  padding: ${props => props.noPadding ? '0' : '5px 0'};
   border-radius: 6px;
   font-size: 15px;
   position: absolute;
@@ -33,17 +32,17 @@ const ContentContainer = styled.span`
   right: ${props => props.position === 'left' ? '105%' : ''};
   margin-left: ${
     props => props.position === 'bottom' || props.position === 'top' ? "-60px" : ""/* Use half of the width (120/2 = 60), to center the tooltip */
-  }; 
+  };
 `;
 
 
 function Tooltip(props) {
-  const { content, children, position } = props;
+  const { content, children, ...rest } = props;
 
   return (
     <Wrapper>
       {children}
-      <ContentContainer position={position}>
+      <ContentContainer {...rest}>
         {content}
       </ContentContainer>
     </Wrapper>
@@ -54,10 +53,12 @@ Tooltip.propTypes = {
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   children: PropTypes.element.isRequired,
   position: PropTypes.string,
+  noPadding: PropTypes.bool,
 }
 
 Tooltip.defaultProps = {
   position: 'top',
+  noPadding: false,
 }
 
 export default Tooltip;

@@ -8,13 +8,10 @@
 		"value": "07-08-1992"
 	},
 	"country": {
-		"type": "location",
-    "value": "KR",
-    "img_url": "../assets/kr_flag.jpg"
-	},
-	"country name": {
 		"type": "PI",
-		"value": "Corea del Sur"
+		"value": "Corea del Sur",
+		"img_url": "/assets/south-korea-flag-3d-round-icon-32.png",
+		"width": "220px"
 	},
 	"position": {
 		"type": "careerInfo",
@@ -27,10 +24,10 @@
 			"values": [5, 26, 8, 20, 13, 9, 3, -1]
 		}
 	},
-	"current team": {
+	"team": {
 		"type": "careerInfo",
     "value": "Tottenham",
-    "img_url": "../assets/tottenham.png"
+    "img_url": "/assets/tottenham.png"
 	},
 	"goals": {
 		"type": "careerInfo",
@@ -40,7 +37,7 @@
 		"type": "careerInfo",
 		"value": 2
 	},
-	"shirtNumber": {
+	"shirt number": {
 		"type": "careerInfo",
 		"value": 7
 	},

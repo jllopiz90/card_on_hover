@@ -6,7 +6,7 @@ const ImageStyles = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #dfe9ea;
 `;
 
 function CircularImg(props) {
