@@ -19,10 +19,8 @@
 	},
 	"points": {
 		"type": "chartInfo",
-		"value": {
-			"chartType": "bars",
-			"values": [5, 26, 8, 20, 13, 9, 3, -1]
-		}
+		"chartType": "bars",
+		"values": [5, 26, 8, 20, 13, 9, 3, -1]
 	},
 	"team": {
 		"type": "careerInfo",
@@ -44,14 +42,12 @@
 	"attributes": {
     "type": "chartInfo",
     "chartType": "radar",
-    "value": {
-      "values": {
-        "attack": 86,
-        "technique": 75,
-        "tactic": 34,
-        "defense": 14,
-        "creativity": 76
-      }
-    }
+    "values": {
+			"attack": 86,
+			"technique": 75,
+			"tactic": 34,
+			"defense": 14,
+			"creativity": 76
+		}
 	}
 }

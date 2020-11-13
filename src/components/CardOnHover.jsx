@@ -4,17 +4,14 @@ import styled from 'styled-components';
 import Card from './Card';
 import Tooltip from './Tooltip';
 import BarChartComponent from './BarChartComponent';
-import { formatPointsForChart } from '../utils/utils';
+import RadarChartComponent from './RadarChartComponent';
+import { formatPointsForChart, formatAttributesForRadar } from '../utils/utils';
 
 const FieldWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   margin-bottom: 20px;
-`;
-
-const ChartWrapper = styled.div`
-  
 `;
 
 const Field = styled.div`
@@ -59,9 +56,16 @@ function CardOnHover(props) {
   .filter((key) => data[key].type === 'chartInfo')
   .map((key, index) => (
     <div key={`chart_${index + 1}`}>
-      {data[key].value.chartType === 'bars' && (
+      {data[key].chartType === 'bars' && (
         <BarChartComponent 
           data={formatPointsForChart(data)}
+          width={300}
+          height={200}
+        />
+      )}
+      {data[key].chartType === 'radar' && (
+        <RadarChartComponent 
+          data={formatAttributesForRadar(data)}
           width={300}
           height={200}
         />

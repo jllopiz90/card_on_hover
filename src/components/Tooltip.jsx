@@ -22,7 +22,7 @@ const ContentContainer = styled.span`
   position: absolute;
   z-index: 1;
   top:  ${props => (props.position === 'bottom' && '100%')
-   || ((props.position === 'right' || props.position === 'left') && '-5px') || '' };
+   || ((props.position === 'right' || props.position === 'left') && '-75px') || '' };
   bottom:  ${props => props.position === 'top' ? '100%' : ""};
   left: ${
     props => ((props.position === 'bottom' || props.position === 'top') && '50%')
