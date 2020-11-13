@@ -45,8 +45,8 @@ function CardOnHover(props) {
     <FieldWrapper>
       {Object.keys(data)
       .filter((key) => data[key].type === 'PI' || data[key].type === 'careerInfo')
-      .map((key) => (
-        <Field width={data[key].width}>
+      .map((key, index) => (
+        <Field width={data[key].width} key={`field_${index + 1}`}>
           <Header>{key}:</Header>
           {data[key].value}
           {Boolean(data[key].img_url) && <SmallImg src={data[key].img_url} />}
@@ -57,8 +57,8 @@ function CardOnHover(props) {
 
   const getCharts = () => Object.keys(data)
   .filter((key) => data[key].type === 'chartInfo')
-  .map((key) => (
-    <div>
+  .map((key, index) => (
+    <div key={`chart_${index + 1}`}>
       {data[key].value.chartType === 'bars' && (
         <BarChartComponent 
           data={formatPointsForChart(data)}

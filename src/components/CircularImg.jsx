@@ -11,7 +11,7 @@ const ImageStyles = styled.img`
 
 function CircularImg(props) {
   const { src, alt } = props;
-  return <ImageStyles src={src}  alt={alt} />
+  return <ImageStyles src={src}  alt={alt} data-testid="circular-img" />
 }
 
 CircularImg.propTypes = {
