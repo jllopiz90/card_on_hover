@@ -21,3 +21,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### Description
 Card on hover is a component that will display a card with data on element hover.
+
+### Todo
+Fetch data with request and store response in component state.
