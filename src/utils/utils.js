@@ -28,3 +28,5 @@ export function getAgeFromDOB(jsonObject) {
   }
   return currentYear - Number.parseInt(dobParts[2]) - 1;
 }
+
+export const isMobile = () => /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);

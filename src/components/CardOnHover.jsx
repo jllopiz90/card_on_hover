@@ -5,13 +5,15 @@ import Card from './Card';
 import Tooltip from './Tooltip';
 import BarChartComponent from './BarChartComponent';
 import RadarChartComponent from './RadarChartComponent';
-import { formatPointsForChart, formatAttributesForRadar } from '../utils/utils';
+import { formatPointsForChart, formatAttributesForRadar, isMobile } from '../utils/utils';
 
 const FieldWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-bottom: 20px;
+  }
 `;
 
 const Field = styled.div`
@@ -76,12 +78,12 @@ function CardOnHover(props) {
   const getCardContent = () => (
     <Card>
       {getFields()}
-      {getCharts()}
+      {!isMobile() && getCharts()}
     </Card>
   );
 
   return (
-    <Tooltip content={getCardContent()} position="center" noPadding>
+    <Tooltip content={getCardContent()} position={(isMobile() && 'top') || 'left'} noPadding isMobile={isMobile()}>
       {children}
     </Tooltip>    
   )

@@ -7,7 +7,7 @@ const WrapperDiv = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  min-width: 300px;
+  min-width: 200px;
   min-height: 200px;
   padding: 10px;
   opacity: ${props => props.transparency};
