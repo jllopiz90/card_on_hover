@@ -23,15 +23,15 @@ const ContentContainer = styled.span`
   z-index: 1;
   top:  ${props => (props.position === 'bottom' && '100%')
    || ((props.position === 'right' || props.position === 'left') && '-75px') || '' };
-  bottom:  ${props => props.position === 'top' ? '100%' : ""};
+  bottom:  ${props => (props.position === 'top' && '100%') || (props.position === 'center' && '-300%') || ""};
   left: ${
-    props => ((props.position === 'bottom' || props.position === 'top') && '50%')
+    props => ((props.position === 'bottom' || props.position === 'top' || props.position === 'center') && '50%')
       || (props.position === 'right' && '105%')
       || ''
   };
   right: ${props => props.position === 'left' ? '105%' : ''};
   margin-left: ${
-    props => props.position === 'bottom' || props.position === 'top' ? "-60px" : ""/* Use half of the width (120/2 = 60), to center the tooltip */
+    props => props.position === 'bottom' || props.position === 'top' || props.position === 'center' ? "-60px" : ""/* Use half of the width (120/2 = 60), to center the tooltip */
   };
 `;
 

@@ -81,7 +81,7 @@ function CardOnHover(props) {
   );
 
   return (
-    <Tooltip content={getCardContent()} position="left" noPadding>
+    <Tooltip content={getCardContent()} position="center" noPadding>
       {children}
     </Tooltip>    
   )
